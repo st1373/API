@@ -7,13 +7,13 @@ def hello_world():
     user_agent = request.headers.get('User-Agent')
     if 'Chrome' in user_agent:
         app.logger.info("Chrome browser detected")
-        return 'Hello Google2'
+        return 'Hello Google3'
     elif 'Firefox' in user_agent:
         app.logger.info("Firefox browser detected")
-        return 'Hello Firefox2'
+        return 'Hello Firefox3'
     else:
         app.logger.info("Other browser detected")
-        return 'Hello World2'
+        return 'Hello World3'
 
 if __name__ == '__main__':
     # Bind to all interfaces
