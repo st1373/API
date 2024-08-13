@@ -23,7 +23,7 @@ jobs:
       run: |
         SHORT_HASH=$(echo "${GITHUB_SHA}" | cut -c1-7)
         echo "Short Hash: $SHORT_HASH"
-        docker build -t somayeteymurifar/api:$SHORT_HASH 
+        docker build -t somayeteymurifar/api:$SHORT_HASH .
 
     - name: Push Docker image
       run: |
