@@ -22,11 +22,14 @@ jobs:
     - name: Build Docker image
       run: |
         SHORT_HASH=$(echo "${GITHUB_SHA}" | cut -c1-7)
-        docker build -t somayeteymurifar/api:$SHORT_HASH .
+        echo "Short Hash: $SHORT_HASH"
+        docker build -t somayeteymurifar/api:$SHORT_HASH 
 
     - name: Push Docker image
       run: |
         SHORT_HASH=$(echo "${GITHUB_SHA}" | cut -c1-7)
+        echo "Short Hash: $SHORT_HASH"
         docker push somayeteymurifar/api:$SHORT_HASH
+
 
 
