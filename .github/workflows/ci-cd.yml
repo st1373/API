@@ -22,8 +22,6 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t somayeteymurifar/api:latest .
- 
-'somayeteymurifar/api:latest'
 
     - name: Push Docker image
       run: |
